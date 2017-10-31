@@ -1,0 +1,17 @@
+.navbar-nav .dropdown-menu > li .menu {
+    max-height: 200px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow-x: hidden;
+}
+
+.navbar-nav .dropdown-menu > li .menu > li > a {
+  color: #444444;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 10px;
+  display: block;
+  white-space: nowrap;
+  //border-bottom: 1px solid #f4f4f4;
+}

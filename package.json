@@ -1,0 +1,73 @@
+{
+  "name": "request-ce-bundle-react-boilerplate",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test --env=jsdom",
+    "format": "prettier \"src/**/*.{js,jsx,json,css,scss}\" --write",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "enzyme": "^3.1.0",
+    "enzyme-adapter-react-15": "^1.0.1",
+    "enzyme-to-json": "^3.1.2",
+    "jest-immutable-matchers": "^1.5.0",
+    "node-sass": "^4.5.3",
+    "prettier": "^1.7.4",
+    "raw-loader": "^0.5.1",
+    "react-app-rewired": "^1.3.1",
+    "react-scripts": "1.0.14",
+    "react-test-renderer": "^15.6.1",
+    "sass-loader": "^6.0.6"
+  },
+  "dependencies": {
+    "admin-lte": "^2.4.2",
+    "axios": "^0.16.2",
+    "babel-polyfill": "^6.26.0",
+    "bootstrap": "^3.3.7",
+    "bootstrap-select": "^1.12.4",
+    "classnames": "^2.2.5",
+    "connected-react-router": "^4.2.3",
+    "font-awesome-svg-png": "^1.2.2",
+    "history": "^4.7.2",
+    "immutable": "4.0.0-rc.2",
+    "is-function": "^1.0.1",
+    "isarray": "^2.0.2",
+    "jquery": "^3.2.1",
+    "moment": "2.18.1",
+    "react": "^15.6.1",
+    "react-addons-shallow-compare": "^15.6.0",
+    "react-adm-lte": "^0.0.8",
+    "react-autocomplete": "^1.7.1",
+    "react-avatar": "^2.4.0",
+    "react-bootstrap": "^0.31.5",
+    "react-document-title": "^2.0.3",
+    "react-dom": "^15.6.1",
+    "react-kinetic-core": "^0.3.1",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "react-sidebar": "^2.3.2",
+    "react-svg-inline": "^2.0.0",
+    "react-transition-group": "^1.1.2",
+    "reactstrap": "^4.8.0",
+    "recompose": "^0.25.0",
+    "redux": "^3.7.2",
+    "redux-form": "^5.3.6",
+    "redux-saga": "^0.16.0",
+    "typeface-open-sans": "^0.0.35",
+    "underscore": "^1.8.3"
+  },
+  "proxy": {
+    "/": {
+      "target": "https://kinops.io",
+      "headers": {
+        "X-Webpack-Bundle-Name": "request-ce-bundle-catalog-adminlte-react"
+      },
+      "secure": false,
+      "autoRewrite": true,
+      "protocolRewrite": "http"
+    }
+  }
+}

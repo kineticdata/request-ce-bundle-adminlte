@@ -1,0 +1,13 @@
+.submission-row dl > dt, .submission-row dl > dd {
+  width:auto;
+  margin-left:auto;
+  display:inline-block;
+}
+
+.submission-row dl > dt {
+  white-space: pre;
+}
+
+.submission-row dl {
+  margin-bottom:0px;
+}
