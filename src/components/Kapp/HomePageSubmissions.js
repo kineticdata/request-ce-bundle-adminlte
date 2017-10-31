@@ -14,23 +14,27 @@ const HomePageSubmissionsComponent = ({ submissions, loading }) => {
         <Box primary>
           <Header border title="My Recent Requests"/>
           <Body>
-            <div className="table-responsive">
-              <table className="table table-hover datatable nosearch">
-                <thead>
-                    <tr>
-                        <th>Item Requested</th>
-                        <th>Details</th>
-                        <th>Date Submitted</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                  {submissions.map(submission =>
-                    <SubmissionRow key={submission.id} submission={submission}/>
-                  )}
-                </tbody>
-              </table>
-            </div>
+            { submissions.length > 0 ? (
+              <div className="table-responsive">
+                <table className="table table-hover datatable nosearch">
+                  <thead>
+                      <tr>
+                          <th>Item Requested</th>
+                          <th>Details</th>
+                          <th>Date Submitted</th>
+                          <th>Status</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                    {submissions.map(submission =>
+                      <SubmissionRow key={submission.id} submission={submission}/>
+                    )}
+                  </tbody>
+                </table>
+              </div>
+            ):(
+              <h5 className="text-center">No Recent Submissions to Display</h5>
+            )}
           </Body>
           <Footer>
             <center>

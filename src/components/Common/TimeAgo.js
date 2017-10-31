@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import moment from 'moment';
 import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 
-import * as constants from '../constants';
+import * as constants from '../../constants';
 
 export class TimeAgo extends Component {
   constructor(props) {

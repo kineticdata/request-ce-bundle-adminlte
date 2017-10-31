@@ -14,23 +14,25 @@ const countMatchingForms = (category, forms) =>
     .count();
 
 export const CategoryListCard = ({ category, forms }) =>
-  <Box>
-    <Body>
-      <Link to={`/categories/${category.slug}`}>
-        <div className="category-card">
-          <div className="card-content" style={{ borderTopColor: getAttributeValue('Color', category) || getColor(category.slug) }}>
-            <div className="card-icon-bg" style={{ backgroundColor: getAttributeValue('Color', category) || getColor(category.slug) }}>
-              <i className={`fa-2x fa ${category.icon}`} />
-            </div>
-            <div className="card-title">
-              <h3 className="ellipsis">{category.name}</h3>
-              <p className="subtle">{countMatchingForms(category, forms)} Services</p>
+  <div className="col-sm-4">
+    <Box color={getAttributeValue('Color', category) || getColor(category.slug)}>
+      <Body>
+        <Link to={`/categories/${category.slug}`}>
+          <div className="category-card">
+            <div className="card-content">
+              <div className="card-icon-bg">
+                <i className={`fa-2x fa ${category.icon}`} />
+              </div>
+              <div className="card-title">
+                <h3 className="ellipsis">{category.name}</h3>
+                <p className="subtle">{countMatchingForms(category, forms)} Services</p>
+              </div>
             </div>
           </div>
-        </div>
-      </Link>
-    </Body>
-  </Box>;
+        </Link>
+      </Body>
+    </Box>
+  </div>;
 
 const CategoryListComponent = ({ categories, forms }) =>
   <div>

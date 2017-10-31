@@ -19,7 +19,7 @@ const Box = props => {
   })
 
   return (
-    <div className={className}>
+    <div className={className} style={{borderTopColor: props.color}}>
       {props.children}
       {overlay && <Overlay />}
     </div>
@@ -35,7 +35,7 @@ Box.propTypes = {
   danger: PropTypes.bool,
   collapsed: PropTypes.bool,
   overlay: PropTypes.bool,
-  children: PropTypes.node
+  children: PropTypes.node,
 }
 
 export default Box

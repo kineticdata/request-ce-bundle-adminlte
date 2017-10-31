@@ -53,40 +53,46 @@ export const List =
         </NavTab>
         <TabContent>
           <TabPane active>
-            <table className="table table-hover datatable nosearch">
-              <thead>
-                <tr>
-                  <th>Item Requested</th>
-                  <th>Confirmation #</th>
-                  <th>Relevant Dates</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                {
-                  submissions.map(submission =>
-                    <SubmissionRow
-                      key={submission.id}
-                      submission={submission}
-                    />
-                  )
-                }
-              </tbody>
-            </table>
-            <ul className="pagination pull-right">
-              {
-                hasPreviousPage &&
-                <li>
-                  <a onClick={handlePreviousPage} >Previous Page</a>
-                </li>
-              }
-              {
-                hasNextPage &&
-                <li>
-                  <a onClick={handleNextPage} >Next Page</a>
-                </li>
-              }
-            </ul>
+            { submissions.length > 0 ? (
+              <div>
+                <table className="table table-hover datatable nosearch">
+                  <thead>
+                    <tr>
+                      <th>Item Requested</th>
+                      <th>Confirmation #</th>
+                      <th>Relevant Dates</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {
+                      submissions.map(submission =>
+                        <SubmissionRow
+                          key={submission.id}
+                          submission={submission}
+                        />
+                      )
+                    }
+                  </tbody>
+                </table>
+                <ul className="pagination pull-right">
+                  {
+                    hasPreviousPage &&
+                    <li>
+                      <a onClick={handlePreviousPage} >Previous Page</a>
+                    </li>
+                  }
+                  {
+                    hasNextPage &&
+                    <li>
+                      <a onClick={handleNextPage} >Next Page</a>
+                    </li>
+                  }
+                </ul>
+              </div>
+            ):(
+              <h5 className="text-center">No Submissions to Display</h5>
+            )}
           </TabPane>
         </TabContent>
       </div>
