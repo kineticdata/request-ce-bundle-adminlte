@@ -4,7 +4,7 @@ is styled using the **AdminLTE** theme found here (https://adminlte.io). The bun
 uses ReactJS.
 
 # Screenshot
-<img src="background.png" width="800" alt="Mybridge Medium">
+<img src="screenshot.png" width="800" alt="Bundle Screenshot">
 
 ## Requirements
 * Kinetic Request CE version 2.0.2 or Later
