@@ -1,5 +1,5 @@
 {
-  "name": "request-ce-bundle-react-boilerplate",
+  "name": "request-ce-bundle-adminlte",
   "version": "0.0.0",
   "description": "",
   "scripts": {
@@ -63,7 +63,7 @@
     "/": {
       "target": "https://kinops.io",
       "headers": {
-        "X-Webpack-Bundle-Name": "request-ce-bundle-catalog-adminlte-react"
+        "X-Webpack-Bundle-Name": "request-ce-bundle-adminlte"
       },
       "secure": false,
       "autoRewrite": true,
