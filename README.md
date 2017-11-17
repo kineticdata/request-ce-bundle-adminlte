@@ -1,6 +1,10 @@
-# request-ce-bundle-catalog-adminlte-react
+# request-ce-bundle-adminlte
 This is a bundle designed for usage in a Catalog Style Kinetic Request CE Kapp and
-is styled using the **AdminLTE** theme found here (https://adminlte.io).
+is styled using the **AdminLTE** theme found here (https://adminlte.io). The bundle
+uses ReactJS.
+
+# Screenshot
+<img src="background.png" width="800" alt="Mybridge Medium">
 
 ## Requirements
 * Kinetic Request CE version 2.0.2 or Later
