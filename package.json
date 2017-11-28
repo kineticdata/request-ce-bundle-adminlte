@@ -1,31 +1,27 @@
 {
-  "name": "request-ce-bundle-adminlte",
-  "version": "0.0.0",
-  "description": "",
+  "name": "adminlte",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
-    "test": "react-app-rewired test --env=jsdom",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "format": "prettier \"src/**/*.{js,jsx,json,css,scss}\" --write",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "test:ci": "jest --ci --testResultsProcessor=./node_modules/jest-junit-reporter"
   },
   "devDependencies": {
     "enzyme": "^3.1.0",
     "enzyme-adapter-react-15": "^1.0.1",
     "enzyme-to-json": "^3.1.2",
+    "jest": "^21.2.1",
     "jest-immutable-matchers": "^1.5.0",
-    "node-sass": "^4.5.3",
+    "jest-junit-reporter": "^1.1.0",
     "prettier": "^1.7.4",
-    "raw-loader": "^0.5.1",
-    "react-app-rewired": "^1.3.1",
-    "react-scripts": "1.0.14",
-    "react-test-renderer": "^15.6.1",
-    "sass-loader": "^6.0.6"
+    "react-test-renderer": "15.6.1"
   },
   "dependencies": {
     "admin-lte": "^2.4.2",
-    "axios": "^0.16.2",
-    "babel-polyfill": "^6.26.0",
     "bootstrap": "^3.3.7",
     "bootstrap-select": "^1.12.4",
     "classnames": "^2.2.5",
@@ -36,15 +32,16 @@
     "is-function": "^1.0.1",
     "isarray": "^2.0.2",
     "jquery": "^3.2.1",
+    "kinops-react-scripts": "0.8.0",
     "moment": "2.18.1",
-    "react": "^15.6.1",
+    "react": "15.6.1",
     "react-addons-shallow-compare": "^15.6.0",
-    "react-adm-lte": "^0.0.8",
+    "react-adm-lte": "^0.0.10",
     "react-autocomplete": "^1.7.1",
     "react-avatar": "^2.4.0",
     "react-bootstrap": "^0.31.5",
     "react-document-title": "^2.0.3",
-    "react-dom": "^15.6.1",
+    "react-dom": "15.6.1",
     "react-kinetic-core": "^0.3.1",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
@@ -58,16 +55,5 @@
     "redux-saga": "^0.16.0",
     "typeface-open-sans": "^0.0.35",
     "underscore": "^1.8.3"
-  },
-  "proxy": {
-    "/": {
-      "target": "https://kinops.io",
-      "headers": {
-        "X-Webpack-Bundle-Name": "request-ce-bundle-adminlte"
-      },
-      "secure": false,
-      "autoRewrite": true,
-      "protocolRewrite": "http"
-    }
   }
 }
