@@ -18,6 +18,13 @@ pipeline {
 
       }
     }
+	stage('Debug info') {
+		steps {
+			echo 'Validating some assumptions...'
+			sh 'pwd'
+			sh 'ls -lstra'
+		}
+	}
     stage('Test') {
       steps {
         echo 'Re-enable tests when they are fixed'
